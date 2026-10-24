@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+body { background: #020817; }
+
+@keyframes progress-bar {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(500%); }
+}
+.progress-indeterminate { animation: progress-bar 1.3s ease-in-out infinite; }
+
+@keyframes slide-up-fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up   { animation: slide-up-fade 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-slide-up-1 { animation: slide-up-fade 0.5s 0.08s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-slide-up-2 { animation: slide-up-fade 0.5s 0.16s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-slide-up-3 { animation: slide-up-fade 0.5s 0.24s cubic-bezier(0.22,1,0.36,1) both; }
+
+.url-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34,211,238,0.4), 0 0 20px rgba(34,211,238,0.1);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.35); border-radius: 4px; }
